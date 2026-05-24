@@ -1,1 +1,2 @@
-# CS_Blue-Team-Lab
+# Adversary Emulation & Detection Lab
+
