@@ -1,5 +1,5 @@
 
-# Cybersecurity Detection & Monitoring Lab
+# Cybersecurity Adversary Emulation & Detection Lab
 
 # System Information
 
@@ -30,25 +30,21 @@
 
 **Downloading Splunk Version : splunk-10.2.2**
 
-<img width="1278" height="228" alt="splunk_download" src="https://github.com/user-attachments/assets/7094a80a-a859-40fe-989b-576631236043" />
+<img width="641" height="338" alt="LAB SS1" src="https://github.com/user-attachments/assets/eb9e1bbf-2848-4f9c-9935-7874e905e827" />
+
 
 **Installing Splunk**
 
-<img width="836" height="590" alt="splunk_create_error" src="https://github.com/user-attachments/assets/4f5c915b-d7f5-46ab-9986-d22f461439fa" />
+<img width="647" height="237" alt="LAB SS2" src="https://github.com/user-attachments/assets/94e15d96-8f2d-4c45-b602-dff8224d7aa5" />
 
-After installing we get an error
 
-<img width="836" height="590" alt="splunk_create_error" src="https://github.com/user-attachments/assets/0733cf2d-a5d0-4061-a415-bc91ce1df3fb" />
-
-Changed permission of **/opt/splunk** dir & sub dir to user **splunk** and group **splunk**
-
-<img width="635" height="52" alt="splunk_permission" src="https://github.com/user-attachments/assets/eeb62376-a75d-42a4-89af-a2491cb4b913" />
 
 **Starting Splunk**
+<img width="634" height="479" alt="image" src="https://github.com/user-attachments/assets/263df457-6d5a-44eb-998a-f3c8e10dc23d" />
+<img width="1708" height="741" alt="LAB SS SPLUNK MISSING" src="https://github.com/user-attachments/assets/34d24dce-836f-4c50-bb01-497276cd446d" />
+<img width="1275" height="757" alt="LAB SS3" src="https://github.com/user-attachments/assets/67dd386e-2816-412a-9247-031f029434fd" />
 
-<img width="973" height="595" alt="splunk_start" src="https://github.com/user-attachments/assets/42674fa0-78b3-4dcf-9b70-21f05f855557" />
-<img width="1292" height="799" alt="splunk_login_Page" src="https://github.com/user-attachments/assets/23ff3b65-a216-47ea-a811-d1d343c51cba" />
-<img width="1294" height="801" alt="splunk_home" src="https://github.com/user-attachments/assets/138ce2a8-e942-4770-8cf1-85868e5c2296" />
+
 
 -------------------------------------------------------------
 **Download Universal Forwarder** [Link](https://www.splunk.com/en_us/download/universal-forwarder.html)
@@ -56,44 +52,53 @@ Changed permission of **/opt/splunk** dir & sub dir to user **splunk** and group
 <img width="1330" height="606" alt="splunk_universal_down" src="https://github.com/user-attachments/assets/9755e42b-f555-4263-a994-8a28e0c8990d" />
 
 **Installing Universal Forwarder**
+<img width="501" height="390" alt="LAB SS4" src="https://github.com/user-attachments/assets/a4709e3c-df39-4aab-843c-9dc19d3c6b84" />
+<img width="497" height="391" alt="LAB SS5" src="https://github.com/user-attachments/assets/df003aeb-1bba-4917-8af5-fe65c43daa30" />
 
-<img width="579" height="454" alt="splunk_ins1" src="https://github.com/user-attachments/assets/ef1e373a-d293-49de-ba42-1930008e5974" />
-<img width="586" height="466" alt="splunk_ins2" src="https://github.com/user-attachments/assets/3146e319-a395-4bc1-b0f2-24633a2cbfce" />
 
 Set Receiver Port on Kali Machine : **9997** 
-<img width="948" height="380" alt="splunk_ins3" src="https://github.com/user-attachments/assets/f96abb90-3e2e-4bc8-b815-e67e65ad8a50" />
+<img width="1699" height="855" alt="LAB SS9" src="https://github.com/user-attachments/assets/98ab2fef-e504-46ab-8ae6-dabbd0caddf7" />
 
-Get ip address of kali machine : **192.168.211.129**  
-<img width="669" height="351" alt="splunk_ins4" src="https://github.com/user-attachments/assets/822ce5d0-efef-4544-a785-dd8d53ab43cf" />  
 
-Now set **Host: 192.168.211.129** and **Port: 8089** as **Deployment Server**  in Windows Machine  
-<img width="577" height="486" alt="splunk_ins5" src="https://github.com/user-attachments/assets/f9b4e216-b636-4f99-83da-d1fbfd315293" />  
-<img width="610" height="495" alt="splunk_ins6" src="https://github.com/user-attachments/assets/f587609f-1ccd-4efd-821d-5c5305de5abc" />
+Get ip address of kali machine : **192.168.65.129**  
+<img width="646" height="512" alt="LAB SS7" src="https://github.com/user-attachments/assets/bcca30da-6fb8-4064-b6dc-37c4d09078aa" />
+
+
+Now set **Host: 192.168.65.129** and **Port: 8089** as **Deployment Server**  in Windows Machine  
+<img width="496" height="389" alt="LAB SS6" src="https://github.com/user-attachments/assets/3d301281-5e3c-4c70-acae-7f078d6942f5" />
+<img width="495" height="388" alt="LAB SS8" src="https://github.com/user-attachments/assets/6aea367c-4087-4e62-9a22-9c27c88e6ac4" />
 
 Check if the forwarder is active   
 
-<img width="861" height="603" alt="splunk_chk_forwarder" src="https://github.com/user-attachments/assets/afe5ceff-c98b-44f4-b073-4251c53b1b11" />  
+<img width="981" height="512" alt="LAB SS10" src="https://github.com/user-attachments/assets/7d73f471-8ecd-4d58-83a6-ab1f2b87343a" />
 
 Now, we will setup sysmon. First we will download and extract sysmon files to C:\Tools\Sysmon  
-<img width="714" height="306" alt="Sysmon_down" src="https://github.com/user-attachments/assets/a6a469a6-a052-42cd-ad29-35eb19f2d9a5" />  
+<img width="1155" height="597" alt="LAB SS11" src="https://github.com/user-attachments/assets/b1313ea9-40e9-4233-8ef0-7b55000465f5" />
+ 
 
 Save the configuraion file to the same directory
-<img width="831" height="383" alt="sysmon_config" src="https://github.com/user-attachments/assets/6a351aec-73f4-4ac3-bb2b-d4a2e984229d" />  
+<img width="1699" height="920" alt="LAB SS12" src="https://github.com/user-attachments/assets/e9bf9526-4886-47bc-8e6a-c05e50ac93df" />
+ 
 
 Installing Sysmon  
-<img width="821" height="473" alt="Sysmon_install" src="https://github.com/user-attachments/assets/d5fed800-f618-49ec-87b1-f6fffae7cf58" />  
+<img width="1701" height="354" alt="LAB SS13" src="https://github.com/user-attachments/assets/8414d633-5458-4c4c-93ce-c788d200328f" />
+  
 
 Check if sysmon is running and logging  
-<img width="790" height="398" alt="sysmon_chk" src="https://github.com/user-attachments/assets/d7e6dff6-eed0-4606-b9e5-37e3ea7cccd0" />  
+<img width="1700" height="585" alt="LAb SS14" src="https://github.com/user-attachments/assets/ad68a7e7-d7ae-49a3-a1d5-6571b1336465" />
+  
 
 Now, Create a new index **win** from kali machine  
-<img width="656" height="449" alt="Index" src="https://github.com/user-attachments/assets/724708f6-2b43-4448-b9a0-73019d7b7b9a" />  
+<img width="577" height="440" alt="LAB SS 17 " src="https://github.com/user-attachments/assets/af57652c-585f-46b9-a6ab-1dbae0d06411" />
+
 
 Now create a local app for Sysmon input at : `**C:\Program Files\SplunkUniversalForwarder\etc\apps\TA-local-sysmon\local\inputs.conf**`  
-<img width="806" height="787" alt="Input_filter" src="https://github.com/user-attachments/assets/7355c6e6-94af-47a7-89c1-4a1ff3c79576" />  
+<img width="1330" height="717" alt="LAB SS15" src="https://github.com/user-attachments/assets/2901d1eb-f3d3-44e7-a146-b4b86a55482d" />
+ 
 
 Now restart the forwarder:  
-<img width="761" height="454" alt="Restart_forwarder" src="https://github.com/user-attachments/assets/6ee105a7-b17e-4ed8-8136-ab43d8ebf9f6" />  
+<img width="1682" height="375" alt="LAB SS16" src="https://github.com/user-attachments/assets/3aae0a29-f056-4f62-8ea9-2220757b72bb" />
+
 
 Checking in kali machine for logs on newly created index = win  
 
