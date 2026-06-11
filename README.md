@@ -133,7 +133,8 @@ Import-Module Invoke-AtomicRedTeam
 ```
 
 Sometime it will make error for directory, To solve this we need to set the environment path to fix the issue.  
-<img width="754" height="171" alt="Invoke_error" src="https://github.com/user-attachments/assets/bd6b6432-e8c4-4f27-8fed-5b5a394276c7" />  
+ <img width="860" height="506" alt="LAB SS22" src="https://github.com/user-attachments/assets/414713c8-b64f-4e63-9b6c-096a05fddfb1" />
+
 
 ```
 Set-ExecutionPolicy Bypass -Scope Process -Force
@@ -146,22 +147,28 @@ $PSDefaultParameterValues = @{
 Get-Command Invoke-AtomicTest
 ````
 
-<img width="757" height="209" alt="invoke_fix" src="https://github.com/user-attachments/assets/e2752022-b071-4b8c-89c8-16c4178421a0" />  
+<img width="1298" height="606" alt="LAB SS23" src="https://github.com/user-attachments/assets/328b2606-cb58-487c-8378-19874bee59ba" />
+
+ 
 
 # T1053.005 (Persistence) | Scheduled Task: Create a task that runs a hidden script (every minute.)  
 
 Check of for modules of **T1053.005**  
-<img width="756" height="276" alt="T1053 005" src="https://github.com/user-attachments/assets/ea9412f1-de1c-488f-8f39-b92377a206e5" />  
+<img width="941" height="262" alt="LAB SS24" src="https://github.com/user-attachments/assets/84aedc5e-09b8-445a-8d29-c02d20757f74" />
+ 
  The built-in test 8 -  T1053.005-8 Import XML Schedule Task with Hidden Attribute does **hidden** has similarity to the task.  
  Execute and check if its ok  
-<img width="969" height="554" alt="T1053 005-8_done" src="https://github.com/user-attachments/assets/4177ef57-24bf-4c30-b1ea-8415686399f7" />  
+<img width="1338" height="597" alt="LAB SS25" src="https://github.com/user-attachments/assets/984ec667-c059-469d-ab76-59e09800879e" />
+  
 
 # T1218.005 (Defense Evasion) | MSHTA: Execute a malicious remote .hta file to bypass app control.  
 
 Check of modules of T1218.005  
-<img width="967" height="244" alt="T1218 005" src="https://github.com/user-attachments/assets/1497e215-7edc-4d2a-acd5-036f1cd896b5" />  
+<img width="1673" height="365" alt="LAB SS26" src="https://github.com/user-attachments/assets/05cd573d-9a4f-42fd-8747-383d3fa28c63" />
+
 As 3 is matches our requirements, we will use **T1218.005-3**  
-<img width="950" height="460" alt="T1218 005-3-done" src="https://github.com/user-attachments/assets/1eee7c2b-297c-40ec-9a37-fc8835d7d3d1" />  
+<img width="1703" height="489" alt="LAB SS27" src="https://github.com/user-attachments/assets/a26f3008-2ae6-4bf8-bffd-04bc8fe613f6" />
+ 
 
 # T1003.001 (Credential Access) | LSASS Dumping: Use procdump to steal credentials from memory.  
 
