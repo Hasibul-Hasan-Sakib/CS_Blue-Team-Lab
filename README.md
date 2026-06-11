@@ -134,9 +134,6 @@ Install-AtomicRedTeam -getAtomics
 Import-Module Invoke-AtomicRedTeam 
 ```
 
-Sometime it will make error for directory, To solve this we need to set the environment path to fix the issue.  
- <img width="860" height="506" alt="LAB SS22" src="https://github.com/user-attachments/assets/414713c8-b64f-4e63-9b6c-096a05fddfb1" />
-
 
 ```
 Set-ExecutionPolicy Bypass -Scope Process -Force
