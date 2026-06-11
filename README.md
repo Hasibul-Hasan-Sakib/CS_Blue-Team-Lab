@@ -17,8 +17,8 @@
 
 | VM | CPU (Core) | RAM (GB) | Network Type |
 |---|---:|---:|---|
-| Kali | 2 | 4 | NAT |
-| Windows Server 2019 | 2 | 4 | NAT |
+| Kali | 2 | 2 | NAT |
+| Windows Server 2019 | 2 | 2 | NAT |
 
 **Kali Machine**  
 <img width="359" height="727" alt="image" src="https://github.com/user-attachments/assets/0b33e102-d91f-4a0c-9e07-8b297d69aa89" />
@@ -178,22 +178,28 @@ Check the module of **T1003.001**
 <img width="854" height="263" alt="LAB SS29" src="https://github.com/user-attachments/assets/14df11f7-7d39-4720-82bd-aa5a1b2d8a1e" />
  
 As 1 matches our requirement, we will use **T1003.001-1**  
-For first run, windows defender blocked the process. So we had to disable the defender real-time protection then it worked and file has been written on **C:\Windows\Temp\lsass_dump.dmp**  
-<img width="796" height="587" alt="T1003 001-1-done" src="https://github.com/user-attachments/assets/345e233e-7913-4036-936a-4aefa8d573fc" />  
+<img width="736" height="194" alt="LAB SS35" src="https://github.com/user-attachments/assets/5a54c96a-abbf-4591-ba1b-5c4206d15cda" />
+<img width="553" height="340" alt="LAB T1003_001" src="https://github.com/user-attachments/assets/db7a6b7e-4e17-4f48-a278-6b5e3f17c573" />
+
+
 
 # T1059.001 (Execution) | PowerShell Download:  Download and execute a script from the web.  
 
 Check the module of **T1059.001**  
-<img width="958" height="428" alt="T1059 001" src="https://github.com/user-attachments/assets/dcb72c26-c22c-4829-b4b1-f7db14a90d46" />  
+<img width="858" height="358" alt="LAB SS30" src="https://github.com/user-attachments/assets/ed59aa4a-41c9-4d16-b8d8-5027da4a87f5" />
+
 As option 6 and 8 both are good choice but 6 is purely on powershell. So we are using option 6.  
-<img width="741" height="162" alt="T1059 001-done" src="https://github.com/user-attachments/assets/1e7979e3-b065-47e2-8eac-bcdae6bcc6b9" />  
+<img width="860" height="124" alt="LAB SS31" src="https://github.com/user-attachments/assets/5f056958-ae08-4329-8fbe-11e9a3ac5cbe" />
+ 
 
 # T1112 (Defense Evasion) | Registry Modification: Disable Windows Defender via  
 
 Check the modules of T1112   
-<img width="811" height="908" alt="T1112" src="https://github.com/user-attachments/assets/3d1f171b-870c-4d1e-91ce-680938b63e28" />  
+<img width="1711" height="767" alt="LAB SS32" src="https://github.com/user-attachments/assets/72dc0efd-6a84-4ff0-b2de-0b66715c7d61" />
+
 For this task, we will use three sperate module. **T1112-38 (Suppress Win Defender Notifications),  T1112-51 (Disable Win Defender Notification) and T1112-56 (Tamper Win Defender Protection)**  
-<img width="829" height="423" alt="T1112-done" src="https://github.com/user-attachments/assets/0d9513e8-5cf5-4377-a73b-c31ec7b89519" />  
+<img width="1714" height="454" alt="LAB SS33" src="https://github.com/user-attachments/assets/7393e63c-a091-458e-9c11-2c2ca698ba2b" />
+ 
 **T1112-38 and T1112-51 completed successfully but T1112-56 was blocked by windows security but no notification has been popped because of other two options.**  
 
 # LOG Analysis
@@ -227,7 +233,8 @@ index="win" ("Sysmon" OR "Microsoft-Windows-Sysmon") (EventCode=1 OR EventID=1)
 ```
 
 **Proof:**  
-<img width="1919" height="757" alt="blue_T1053 005" src="https://github.com/user-attachments/assets/3a64b07c-5931-4ef4-9c4a-c5254b82382e" />  
+<img width="1899" height="979" alt="LAB SS EID 1" src="https://github.com/user-attachments/assets/73dc3356-a416-4857-a923-cd98bd5acaa6" />
+
 
 
 **2. T1218.005 (Defense Evasion) | MSHTA:** Sysmon Event ID 1 is most helpful because it shows `mshta.exe` being launched and captures the full command line, including the `.hta` payload.  
@@ -248,7 +255,8 @@ index=win ("Sysmon" OR "Microsoft-Windows-Sysmon") (EventCode=1 OR EventID=1)
 | table Time host User EventCode EventID Process_Name Image Command_Line ParentImage ParentCommandLine ProcessId ParentProcessId
 ```
 **Proof:**  
-<img width="1755" height="755" alt="blue_T1218 005" src="https://github.com/user-attachments/assets/ded8c642-51f8-4d9b-9831-2007c62a54f3" />  
+<img width="1906" height="989" alt="LAB SS EID 2" src="https://github.com/user-attachments/assets/736123af-6d77-41c6-8c86-ea19d3b796c7" />
+ 
 
 **3. T1003.001 (Credential Access) | LSASS Dumping:** Sysmon Event ID 10 is most helpful because it shows a process accessing lsass.exe. That is the key behavior for LSASS credential dumping. The join with Sysmon Event ID 1 adds the original process command line, which proves the process name, command line, and time.  
 
@@ -284,7 +292,8 @@ TargetImage="*\\lsass.exe"
 | table Time host User EventCode EventID Process_Name Image Command_Line SourceImage TargetImage GrantedAccess CallTrace ParentImage ParentCommandLine ProcessId ParentProcessId ProcessGuid
 ```  
 **Proof:**  
-<img width="1917" height="770" alt="blue_T1003 001" src="https://github.com/user-attachments/assets/0121447b-590b-46e8-8f11-310a74822216" />  
+<img width="1901" height="987" alt="LAB SS EID 3" src="https://github.com/user-attachments/assets/be5dfe92-2c93-4bbd-9695-f1c191ecf7df" />
+  
 
 
 **4. T1059.001 (Execution) | PowerShell Download:** Sysmon Event ID 1 is most helpful because it records `powershell.exe` execution and captures the command line showing web download behavior and execution behavior.  
@@ -319,7 +328,8 @@ index=win ("Sysmon" OR "Microsoft-Windows-Sysmon") (EventCode=1 OR EventID=1)
 | table Time host User EventCode EventID Process_Name Image Command_Line ParentImage ParentCommandLine ProcessId ParentProcessId
 ```
 **Proof:**  
-<img width="1914" height="817" alt="blue_T1059 001" src="https://github.com/user-attachments/assets/cdc3b493-6198-4b31-87b0-2e436090389f" />  
+<img width="1899" height="990" alt="LAB SS EID 4" src="https://github.com/user-attachments/assets/a5130e94-aeac-46f8-962c-a549dc5acae4" />
+
 
 
 **5. T1112 (Defense Evasion) | Registry Modification:** Sysmon Event ID 1 was the most helpful in this environment because it captured the process responsible for the Defender modification attempt, such as `reg.exe`. The command line showed Defender-related modification behavior, including values such as `TamperProtection`, `DisableNotifications`, `Set-MpPreference`, or related Defender settings. This provided the required proof of the process name, command line, and time of the attack.  
@@ -350,4 +360,5 @@ index=win ("Sysmon" OR "Microsoft-Windows-Sysmon") (EventCode=1 OR EventID=1)
 | table Time host User EventCode EventID Process_Name Image Command_Line ParentImage ParentCommandLine ProcessId ParentProcessId
 ```  
 **Proof:**
-<img width="1881" height="819" alt="blue_T1112" src="https://github.com/user-attachments/assets/ecd8782d-4dfa-459f-bb95-542cd46eb3b1" />
+<img width="1899" height="991" alt="LAB SS EID 5" src="https://github.com/user-attachments/assets/43e8423c-eed4-4744-9d3b-59cfd0009b50" />
+
