@@ -42,9 +42,9 @@
 
 
 **Starting Splunk**
-<img width="634" height="479" alt="image" src="https://github.com/user-attachments/assets/263df457-6d5a-44eb-998a-f3c8e10dc23d" />
-<img width="1708" height="741" alt="LAB SS SPLUNK MISSING" src="https://github.com/user-attachments/assets/34d24dce-836f-4c50-bb01-497276cd446d" />
-<img width="1275" height="757" alt="LAB SS3" src="https://github.com/user-attachments/assets/67dd386e-2816-412a-9247-031f029434fd" />
+<img width="1916" height="987" alt="LAB MISSING SS1" src="https://github.com/user-attachments/assets/f529ce31-20c7-4e0a-a191-1dae45218798" />
+<img width="1910" height="991" alt="LAB MISSING SS12" src="https://github.com/user-attachments/assets/69dfcda8-b31a-42be-8fe0-d91ed390f250" />
+
 
 
 
