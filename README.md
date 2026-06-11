@@ -175,7 +175,8 @@ As 3 is matches our requirements, we will use **T1218.005-3**
 # T1003.001 (Credential Access) | LSASS Dumping: Use procdump to steal credentials from memory.  
 
 Check the module of **T1003.001**  
-<img width="975" height="260" alt="T1003 001" src="https://github.com/user-attachments/assets/f0d51ed5-ba0a-47dd-81ee-bf34ddfba5ea" />  
+<img width="854" height="263" alt="LAB SS29" src="https://github.com/user-attachments/assets/14df11f7-7d39-4720-82bd-aa5a1b2d8a1e" />
+ 
 As 1 matches our requirement, we will use **T1003.001-1**  
 For first run, windows defender blocked the process. So we had to disable the defender real-time protection then it worked and file has been written on **C:\Windows\Temp\lsass_dump.dmp**  
 <img width="796" height="587" alt="T1003 001-1-done" src="https://github.com/user-attachments/assets/345e233e-7913-4036-936a-4aefa8d573fc" />  
