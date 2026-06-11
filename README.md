@@ -103,10 +103,8 @@ Now restart the forwarder:
 
 
 Checking in kali machine for logs on newly created index = win  
+<img width="1915" height="992" alt="LAB MISSING SS3" src="https://github.com/user-attachments/assets/0c30258f-e181-407d-b6ec-5337a059c185" />
 
-<img width="955" height="216" alt="index_win" src="https://github.com/user-attachments/assets/452efcf7-732f-4724-a93a-2e69ba024b88" />  
-
-<img width="955" height="978" alt="splunk_home_data" src="https://github.com/user-attachments/assets/7dc6d6aa-3322-41be-ad94-11da21eeaffc" />  
 
 Enable useful Windows logging with powershell:  
 
