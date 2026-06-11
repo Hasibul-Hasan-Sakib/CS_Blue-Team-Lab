@@ -21,9 +21,11 @@
 | Windows Server 2019 | 2 | 4 | NAT |
 
 **Kali Machine**  
+<img width="359" height="727" alt="image" src="https://github.com/user-attachments/assets/0b33e102-d91f-4a0c-9e07-8b297d69aa89" />
 
 
 **Windows Machine**  
+<img width="305" height="405" alt="image" src="https://github.com/user-attachments/assets/01865737-0acf-4d64-8204-da133dbe78b0" />
 
   
 # Splunk Installation
